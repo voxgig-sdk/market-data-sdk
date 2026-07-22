@@ -1,0 +1,25 @@
+# API Information
+
+
+main: {
+  kit: {
+    info: {
+      auth: false
+      contact: {
+        url: "https://github.com/l0v3m0n3y/binancevision"
+      }
+      description: "This API provides access to public market data from Binance, allowing developers to retrieve information such as ticker prices, trading volume, and other essential details needed for trading applications. Its straightforward interface simplifies the process of integrating market data into various platforms."
+      servers: [
+        {
+          description: "Binance Market Data API Server"
+          url: "https://data-api.binance.vision"
+        }
+      ]
+      summary: "This API provides access to public market data from Binance, allowing developers to retrieve information such as ticker prices, trading volume, and other essential details needed for trading applications."
+      title: "Market Data API"
+      version: "1.0.0"
+      website: "https://github.com/l0v3m0n3y/binancevision"
+    }
+  }
+}
+
