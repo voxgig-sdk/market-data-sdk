@@ -1,4 +1,4 @@
-# ProjectName SDK exists test
+# MarketData SDK exists test
 
 import pytest
 from marketdata_sdk import MarketDataSDK

@@ -7,50 +7,50 @@
 -- edit by hand.
 
 ---@class MarketData
----@field ask_price? string
----@field ask_qty? string
----@field bid_price? string
----@field bid_qty? string
----@field close_time? number
+---@field askPrice? string
+---@field askQty? string
+---@field bidPrice? string
+---@field bidQty? string
+---@field closeTime? number
 ---@field count? number
----@field first_id? number
----@field high_price? string
----@field last_id? number
----@field last_price? string
----@field last_qty? string
----@field low_price? string
----@field open_price? string
----@field open_time? number
----@field prev_close_price? string
----@field price_change? string
----@field price_change_percent? string
----@field quote_volume? string
+---@field firstId? number
+---@field highPrice? string
+---@field lastId? number
+---@field lastPrice? string
+---@field lastQty? string
+---@field lowPrice? string
+---@field openPrice? string
+---@field openTime? number
+---@field prevClosePrice? string
+---@field priceChange? string
+---@field priceChangePercent? string
+---@field quoteVolume? string
 ---@field symbol? string
 ---@field volume? string
----@field weighted_avg_price? string
+---@field weightedAvgPrice? string
 
 ---@class MarketDataLoadMatch
----@field ask_price? string
----@field ask_qty? string
----@field bid_price? string
----@field bid_qty? string
----@field close_time? number
+---@field askPrice? string
+---@field askQty? string
+---@field bidPrice? string
+---@field bidQty? string
+---@field closeTime? number
 ---@field count? number
----@field first_id? number
----@field high_price? string
----@field last_id? number
----@field last_price? string
----@field last_qty? string
----@field low_price? string
----@field open_price? string
----@field open_time? number
----@field prev_close_price? string
----@field price_change? string
----@field price_change_percent? string
----@field quote_volume? string
+---@field firstId? number
+---@field highPrice? string
+---@field lastId? number
+---@field lastPrice? string
+---@field lastQty? string
+---@field lowPrice? string
+---@field openPrice? string
+---@field openTime? number
+---@field prevClosePrice? string
+---@field priceChange? string
+---@field priceChangePercent? string
+---@field quoteVolume? string
 ---@field symbol? string
 ---@field volume? string
----@field weighted_avg_price? string
+---@field weightedAvgPrice? string
 
 local M = {}
 

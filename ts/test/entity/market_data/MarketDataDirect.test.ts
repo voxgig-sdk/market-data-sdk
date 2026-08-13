@@ -19,11 +19,15 @@ import {
 describe('MarketDataDirect', async () => {
 
   // Per-test live pacing. Delay is read from sdk-test-control.json's
-  // `test.live.delayMs`; only sleeps when MARKETDATA_TEST_LIVE=TRUE.
-  afterEach(liveDelay('MARKETDATA_TEST_LIVE'))
+  // `test.live.delayMs`; only sleeps when MARKET_DATA_TEST_LIVE=TRUE.
+  afterEach(liveDelay('MARKET_DATA_TEST_LIVE'))
 
   test('direct-exists', async () => {
     const sdk = new MarketDataSDK({
+      // Concrete base: a live construction must satisfy any server
+      // variables a templated base URL declares; overriding base with a
+      // literal (as the direct flow tests do) sidesteps the requirement.
+      base: 'http://localhost:8080',
       system: { fetch: async () => ({}) }
     })
     assert('function' === typeof sdk.direct)
@@ -72,17 +76,17 @@ function directSetup(mockres?: any) {
   const calls: any[] = []
 
   const env = envOverride({
-    'MARKETDATA_TEST_MARKET_DATA_ENTID': {},
-    'MARKETDATA_TEST_LIVE': 'FALSE',
+    'MARKET_DATA_TEST_MARKET_DATA_ENTID': {},
+    'MARKET_DATA_TEST_LIVE': 'FALSE',
   })
 
-  const live = 'TRUE' === env.MARKETDATA_TEST_LIVE
+  const live = 'TRUE' === env.MARKET_DATA_TEST_LIVE
 
   if (live) {
     const client = new MarketDataSDK({
     })
 
-    let idmap: any = env['MARKETDATA_TEST_MARKET_DATA_ENTID']
+    let idmap: any = env['MARKET_DATA_TEST_MARKET_DATA_ENTID']
     if ('string' === typeof idmap && idmap.startsWith('{')) {
       idmap = JSON.parse(idmap)
     }

@@ -14,12 +14,12 @@ from __future__ import annotations
 
 from urllib.parse import quote
 
-from config import make_config
-from features import _make_feature
-from core.control import MarketDataControl
-from core.error import MarketDataError
-from core.result import MarketDataResult
-from core.spec import MarketDataSpec
+from marketdata_sdk.config import make_config
+from marketdata_sdk.features import _make_feature
+from marketdata_sdk.core.control import MarketDataControl
+from marketdata_sdk.core.error import MarketDataError
+from marketdata_sdk.core.result import MarketDataResult
+from marketdata_sdk.core.spec import MarketDataSpec
 
 
 # True when this SDK was generated with the named feature.

@@ -23,8 +23,8 @@ module MarketDataTestRunner
   end
 
   def self.env_override(m)
-    live = getenv("MARKETDATA_TEST_LIVE")
-    override = getenv("MARKETDATA_TEST_OVERRIDE")
+    live = getenv("MARKET_DATA_TEST_LIVE")
+    override = getenv("MARKET_DATA_TEST_OVERRIDE")
 
     if live == "TRUE" || override == "TRUE"
       m.each_key do |key|
@@ -44,8 +44,8 @@ module MarketDataTestRunner
       end
     end
 
-    explain = getenv("MARKETDATA_TEST_EXPLAIN")
-    m["MARKETDATA_TEST_EXPLAIN"] = explain if explain && !explain.empty?
+    explain = getenv("MARKET_DATA_TEST_EXPLAIN")
+    m["MARKET_DATA_TEST_EXPLAIN"] = explain if explain && !explain.empty?
 
     m
   end

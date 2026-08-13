@@ -24,6 +24,7 @@ require_relative 'prepare_method'
 require_relative 'prepare_params'
 require_relative 'prepare_path'
 require_relative 'prepare_query'
+require_relative 'graphql'
 require_relative 'result_basic'
 require_relative 'result_body'
 require_relative 'result_headers'
@@ -55,6 +56,8 @@ MarketDataUtility.registrar = ->(u) {
   u.prepare_params = MarketDataUtilities::PrepareParams
   u.prepare_path = MarketDataUtilities::PreparePath
   u.prepare_query = MarketDataUtilities::PrepareQuery
+  u.graphql_body = MarketDataUtilities::GraphqlBody
+  u.graphql_errors = MarketDataUtilities::GraphqlErrors
   u.result_basic = MarketDataUtilities::ResultBasic
   u.result_body = MarketDataUtilities::ResultBody
   u.result_headers = MarketDataUtilities::ResultHeaders

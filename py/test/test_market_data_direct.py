@@ -3,9 +3,9 @@
 import json
 import pytest
 
-from utility.voxgig_struct import voxgig_struct as vs
+from marketdata_sdk.utility.voxgig_struct import voxgig_struct as vs
 from marketdata_sdk import MarketDataSDK
-from core import helpers
+from marketdata_sdk.core import helpers
 from test import runner
 
 
@@ -56,11 +56,11 @@ def _market_data_direct_setup(mockres):
     calls = []
 
     env = runner.env_override({
-        "MARKETDATA_TEST_MARKET_DATA_ENTID": {},
-        "MARKETDATA_TEST_LIVE": "FALSE",
+        "MARKET_DATA_TEST_MARKET_DATA_ENTID": {},
+        "MARKET_DATA_TEST_LIVE": "FALSE",
     })
 
-    live = env.get("MARKETDATA_TEST_LIVE") == "TRUE"
+    live = env.get("MARKET_DATA_TEST_LIVE") == "TRUE"
 
     if live:
         merged_opts = {

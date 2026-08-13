@@ -34,7 +34,7 @@ client = MarketDataSDK.new
 
 ```ruby
 begin
-  # load returns the bare MarketData record (raises on error).
+  # load returns the ENTITY — call data_get for the MarketData record (raises on error).
   marketdata = client.MarketData.load()
   puts marketdata
 rescue => err
@@ -117,7 +117,8 @@ Create a mock client for unit testing — no server required:
 ```ruby
 client = MarketDataSDK.test
 
-# Entity ops return the bare mock record (raises on error).
+# Entity ops return the ENTITY (raises on error);
+# call data_get for the mock record.
 marketdata = client.MarketData.load()
 puts marketdata
 ```
@@ -234,27 +235,27 @@ returns a result `Hash` with these keys:
 
 | Field | Description |
 | --- | --- |
-| `ask_price` |  |
-| `ask_qty` |  |
-| `bid_price` |  |
-| `bid_qty` |  |
-| `close_time` |  |
+| `askPrice` |  |
+| `askQty` |  |
+| `bidPrice` |  |
+| `bidQty` |  |
+| `closeTime` |  |
 | `count` |  |
-| `first_id` |  |
-| `high_price` |  |
-| `last_id` |  |
-| `last_price` |  |
-| `last_qty` |  |
-| `low_price` |  |
-| `open_price` |  |
-| `open_time` |  |
-| `prev_close_price` |  |
-| `price_change` |  |
-| `price_change_percent` |  |
-| `quote_volume` |  |
+| `firstId` |  |
+| `highPrice` |  |
+| `lastId` |  |
+| `lastPrice` |  |
+| `lastQty` |  |
+| `lowPrice` |  |
+| `openPrice` |  |
+| `openTime` |  |
+| `prevClosePrice` |  |
+| `priceChange` |  |
+| `priceChangePercent` |  |
+| `quoteVolume` |  |
 | `symbol` |  |
 | `volume` |  |
-| `weighted_avg_price` |  |
+| `weightedAvgPrice` |  |
 
 Operations: Load.
 
@@ -279,32 +280,32 @@ Create an instance: `market_data = client.MarketData`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `ask_price` | `String` |  |
-| `ask_qty` | `String` |  |
-| `bid_price` | `String` |  |
-| `bid_qty` | `String` |  |
-| `close_time` | `Integer` |  |
+| `askPrice` | `String` |  |
+| `askQty` | `String` |  |
+| `bidPrice` | `String` |  |
+| `bidQty` | `String` |  |
+| `closeTime` | `Integer` |  |
 | `count` | `Integer` |  |
-| `first_id` | `Integer` |  |
-| `high_price` | `String` |  |
-| `last_id` | `Integer` |  |
-| `last_price` | `String` |  |
-| `last_qty` | `String` |  |
-| `low_price` | `String` |  |
-| `open_price` | `String` |  |
-| `open_time` | `Integer` |  |
-| `prev_close_price` | `String` |  |
-| `price_change` | `String` |  |
-| `price_change_percent` | `String` |  |
-| `quote_volume` | `String` |  |
+| `firstId` | `Integer` |  |
+| `highPrice` | `String` |  |
+| `lastId` | `Integer` |  |
+| `lastPrice` | `String` |  |
+| `lastQty` | `String` |  |
+| `lowPrice` | `String` |  |
+| `openPrice` | `String` |  |
+| `openTime` | `Integer` |  |
+| `prevClosePrice` | `String` |  |
+| `priceChange` | `String` |  |
+| `priceChangePercent` | `String` |  |
+| `quoteVolume` | `String` |  |
 | `symbol` | `String` |  |
 | `volume` | `String` |  |
-| `weighted_avg_price` | `String` |  |
+| `weightedAvgPrice` | `String` |  |
 
 #### Example: Load
 
 ```ruby
-# load returns the bare MarketData record (raises on error).
+# load returns the ENTITY — call data_get for the MarketData record (raises on error).
 market_data = client.MarketData.load()
 ```
 

@@ -87,27 +87,27 @@ market_data = client.MarketData()
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `ask_price` | `str` | No |  |
-| `ask_qty` | `str` | No |  |
-| `bid_price` | `str` | No |  |
-| `bid_qty` | `str` | No |  |
-| `close_time` | `int` | No |  |
+| `askPrice` | `str` | No |  |
+| `askQty` | `str` | No |  |
+| `bidPrice` | `str` | No |  |
+| `bidQty` | `str` | No |  |
+| `closeTime` | `int` | No |  |
 | `count` | `int` | No |  |
-| `first_id` | `int` | No |  |
-| `high_price` | `str` | No |  |
-| `last_id` | `int` | No |  |
-| `last_price` | `str` | No |  |
-| `last_qty` | `str` | No |  |
-| `low_price` | `str` | No |  |
-| `open_price` | `str` | No |  |
-| `open_time` | `int` | No |  |
-| `prev_close_price` | `str` | No |  |
-| `price_change` | `str` | No |  |
-| `price_change_percent` | `str` | No |  |
-| `quote_volume` | `str` | No |  |
+| `firstId` | `int` | No |  |
+| `highPrice` | `str` | No |  |
+| `lastId` | `int` | No |  |
+| `lastPrice` | `str` | No |  |
+| `lastQty` | `str` | No |  |
+| `lowPrice` | `str` | No |  |
+| `openPrice` | `str` | No |  |
+| `openTime` | `int` | No |  |
+| `prevClosePrice` | `str` | No |  |
+| `priceChange` | `str` | No |  |
+| `priceChangePercent` | `str` | No |  |
+| `quoteVolume` | `str` | No |  |
 | `symbol` | `str` | No |  |
 | `volume` | `str` | No |  |
-| `weighted_avg_price` | `str` | No |  |
+| `weightedAvgPrice` | `str` | No |  |
 
 ### Operations
 

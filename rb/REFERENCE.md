@@ -93,27 +93,27 @@ market_data = client.MarketData
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `ask_price` | `String` | No |  |
-| `ask_qty` | `String` | No |  |
-| `bid_price` | `String` | No |  |
-| `bid_qty` | `String` | No |  |
-| `close_time` | `Integer` | No |  |
+| `askPrice` | `String` | No |  |
+| `askQty` | `String` | No |  |
+| `bidPrice` | `String` | No |  |
+| `bidQty` | `String` | No |  |
+| `closeTime` | `Integer` | No |  |
 | `count` | `Integer` | No |  |
-| `first_id` | `Integer` | No |  |
-| `high_price` | `String` | No |  |
-| `last_id` | `Integer` | No |  |
-| `last_price` | `String` | No |  |
-| `last_qty` | `String` | No |  |
-| `low_price` | `String` | No |  |
-| `open_price` | `String` | No |  |
-| `open_time` | `Integer` | No |  |
-| `prev_close_price` | `String` | No |  |
-| `price_change` | `String` | No |  |
-| `price_change_percent` | `String` | No |  |
-| `quote_volume` | `String` | No |  |
+| `firstId` | `Integer` | No |  |
+| `highPrice` | `String` | No |  |
+| `lastId` | `Integer` | No |  |
+| `lastPrice` | `String` | No |  |
+| `lastQty` | `String` | No |  |
+| `lowPrice` | `String` | No |  |
+| `openPrice` | `String` | No |  |
+| `openTime` | `Integer` | No |  |
+| `prevClosePrice` | `String` | No |  |
+| `priceChange` | `String` | No |  |
+| `priceChangePercent` | `String` | No |  |
+| `quoteVolume` | `String` | No |  |
 | `symbol` | `String` | No |  |
 | `volume` | `String` | No |  |
-| `weighted_avg_price` | `String` | No |  |
+| `weightedAvgPrice` | `String` | No |  |
 
 ### Operations
 

@@ -16,11 +16,11 @@
 import pytest
 
 from marketdata_sdk import MarketDataSDK
-from core.error import MarketDataError
-from core.result import MarketDataResult
-from core.response import MarketDataResponse
-from core.spec import MarketDataSpec
-from feature.base_feature import MarketDataBaseFeature
+from marketdata_sdk.core.error import MarketDataError
+from marketdata_sdk.core.result import MarketDataResult
+from marketdata_sdk.core.response import MarketDataResponse
+from marketdata_sdk.core.spec import MarketDataSpec
+from marketdata_sdk.feature.base_feature import MarketDataBaseFeature
 
 
 def _client():

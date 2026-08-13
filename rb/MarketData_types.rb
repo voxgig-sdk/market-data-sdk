@@ -10,58 +10,58 @@
 
 # MarketData entity data model.
 #
-# @!attribute [rw] ask_price
+# @!attribute [rw] askPrice
 #   @return [String, nil]
 #
-# @!attribute [rw] ask_qty
+# @!attribute [rw] askQty
 #   @return [String, nil]
 #
-# @!attribute [rw] bid_price
+# @!attribute [rw] bidPrice
 #   @return [String, nil]
 #
-# @!attribute [rw] bid_qty
+# @!attribute [rw] bidQty
 #   @return [String, nil]
 #
-# @!attribute [rw] close_time
+# @!attribute [rw] closeTime
 #   @return [Integer, nil]
 #
 # @!attribute [rw] count
 #   @return [Integer, nil]
 #
-# @!attribute [rw] first_id
+# @!attribute [rw] firstId
 #   @return [Integer, nil]
 #
-# @!attribute [rw] high_price
+# @!attribute [rw] highPrice
 #   @return [String, nil]
 #
-# @!attribute [rw] last_id
+# @!attribute [rw] lastId
 #   @return [Integer, nil]
 #
-# @!attribute [rw] last_price
+# @!attribute [rw] lastPrice
 #   @return [String, nil]
 #
-# @!attribute [rw] last_qty
+# @!attribute [rw] lastQty
 #   @return [String, nil]
 #
-# @!attribute [rw] low_price
+# @!attribute [rw] lowPrice
 #   @return [String, nil]
 #
-# @!attribute [rw] open_price
+# @!attribute [rw] openPrice
 #   @return [String, nil]
 #
-# @!attribute [rw] open_time
+# @!attribute [rw] openTime
 #   @return [Integer, nil]
 #
-# @!attribute [rw] prev_close_price
+# @!attribute [rw] prevClosePrice
 #   @return [String, nil]
 #
-# @!attribute [rw] price_change
+# @!attribute [rw] priceChange
 #   @return [String, nil]
 #
-# @!attribute [rw] price_change_percent
+# @!attribute [rw] priceChangePercent
 #   @return [String, nil]
 #
-# @!attribute [rw] quote_volume
+# @!attribute [rw] quoteVolume
 #   @return [String, nil]
 #
 # @!attribute [rw] symbol
@@ -70,87 +70,87 @@
 # @!attribute [rw] volume
 #   @return [String, nil]
 #
-# @!attribute [rw] weighted_avg_price
+# @!attribute [rw] weightedAvgPrice
 #   @return [String, nil]
 MarketData = Struct.new(
-  :ask_price,
-  :ask_qty,
-  :bid_price,
-  :bid_qty,
-  :close_time,
+  :askPrice,
+  :askQty,
+  :bidPrice,
+  :bidQty,
+  :closeTime,
   :count,
-  :first_id,
-  :high_price,
-  :last_id,
-  :last_price,
-  :last_qty,
-  :low_price,
-  :open_price,
-  :open_time,
-  :prev_close_price,
-  :price_change,
-  :price_change_percent,
-  :quote_volume,
+  :firstId,
+  :highPrice,
+  :lastId,
+  :lastPrice,
+  :lastQty,
+  :lowPrice,
+  :openPrice,
+  :openTime,
+  :prevClosePrice,
+  :priceChange,
+  :priceChangePercent,
+  :quoteVolume,
   :symbol,
   :volume,
-  :weighted_avg_price,
+  :weightedAvgPrice,
   keyword_init: true
 )
 
 # Request payload for MarketData#load.
 #
-# @!attribute [rw] ask_price
+# @!attribute [rw] askPrice
 #   @return [String, nil]
 #
-# @!attribute [rw] ask_qty
+# @!attribute [rw] askQty
 #   @return [String, nil]
 #
-# @!attribute [rw] bid_price
+# @!attribute [rw] bidPrice
 #   @return [String, nil]
 #
-# @!attribute [rw] bid_qty
+# @!attribute [rw] bidQty
 #   @return [String, nil]
 #
-# @!attribute [rw] close_time
+# @!attribute [rw] closeTime
 #   @return [Integer, nil]
 #
 # @!attribute [rw] count
 #   @return [Integer, nil]
 #
-# @!attribute [rw] first_id
+# @!attribute [rw] firstId
 #   @return [Integer, nil]
 #
-# @!attribute [rw] high_price
+# @!attribute [rw] highPrice
 #   @return [String, nil]
 #
-# @!attribute [rw] last_id
+# @!attribute [rw] lastId
 #   @return [Integer, nil]
 #
-# @!attribute [rw] last_price
+# @!attribute [rw] lastPrice
 #   @return [String, nil]
 #
-# @!attribute [rw] last_qty
+# @!attribute [rw] lastQty
 #   @return [String, nil]
 #
-# @!attribute [rw] low_price
+# @!attribute [rw] lowPrice
 #   @return [String, nil]
 #
-# @!attribute [rw] open_price
+# @!attribute [rw] openPrice
 #   @return [String, nil]
 #
-# @!attribute [rw] open_time
+# @!attribute [rw] openTime
 #   @return [Integer, nil]
 #
-# @!attribute [rw] prev_close_price
+# @!attribute [rw] prevClosePrice
 #   @return [String, nil]
 #
-# @!attribute [rw] price_change
+# @!attribute [rw] priceChange
 #   @return [String, nil]
 #
-# @!attribute [rw] price_change_percent
+# @!attribute [rw] priceChangePercent
 #   @return [String, nil]
 #
-# @!attribute [rw] quote_volume
+# @!attribute [rw] quoteVolume
 #   @return [String, nil]
 #
 # @!attribute [rw] symbol
@@ -159,30 +159,30 @@ MarketData = Struct.new(
 # @!attribute [rw] volume
 #   @return [String, nil]
 #
-# @!attribute [rw] weighted_avg_price
+# @!attribute [rw] weightedAvgPrice
 #   @return [String, nil]
 MarketDataLoadMatch = Struct.new(
-  :ask_price,
-  :ask_qty,
-  :bid_price,
-  :bid_qty,
-  :close_time,
+  :askPrice,
+  :askQty,
+  :bidPrice,
+  :bidQty,
+  :closeTime,
   :count,
-  :first_id,
-  :high_price,
-  :last_id,
-  :last_price,
-  :last_qty,
-  :low_price,
-  :open_price,
-  :open_time,
-  :prev_close_price,
-  :price_change,
-  :price_change_percent,
-  :quote_volume,
+  :firstId,
+  :highPrice,
+  :lastId,
+  :lastPrice,
+  :lastQty,
+  :lowPrice,
+  :openPrice,
+  :openTime,
+  :prevClosePrice,
+  :priceChange,
+  :priceChangePercent,
+  :quoteVolume,
   :symbol,
   :volume,
-  :weighted_avg_price,
+  :weightedAvgPrice,
   keyword_init: true
 )
 

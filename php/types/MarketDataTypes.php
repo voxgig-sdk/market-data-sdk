@@ -15,52 +15,52 @@ declare(strict_types=1);
 /** MarketData entity data model. */
 class MarketData
 {
-    public ?string $ask_price = null;
-    public ?string $ask_qty = null;
-    public ?string $bid_price = null;
-    public ?string $bid_qty = null;
-    public ?int $close_time = null;
+    public ?string $askPrice = null;
+    public ?string $askQty = null;
+    public ?string $bidPrice = null;
+    public ?string $bidQty = null;
+    public ?int $closeTime = null;
     public ?int $count = null;
-    public ?int $first_id = null;
-    public ?string $high_price = null;
-    public ?int $last_id = null;
-    public ?string $last_price = null;
-    public ?string $last_qty = null;
-    public ?string $low_price = null;
-    public ?string $open_price = null;
-    public ?int $open_time = null;
-    public ?string $prev_close_price = null;
-    public ?string $price_change = null;
-    public ?string $price_change_percent = null;
-    public ?string $quote_volume = null;
+    public ?int $firstId = null;
+    public ?string $highPrice = null;
+    public ?int $lastId = null;
+    public ?string $lastPrice = null;
+    public ?string $lastQty = null;
+    public ?string $lowPrice = null;
+    public ?string $openPrice = null;
+    public ?int $openTime = null;
+    public ?string $prevClosePrice = null;
+    public ?string $priceChange = null;
+    public ?string $priceChangePercent = null;
+    public ?string $quoteVolume = null;
     public ?string $symbol = null;
     public ?string $volume = null;
-    public ?string $weighted_avg_price = null;
+    public ?string $weightedAvgPrice = null;
 }
 
 /** Request payload for MarketData#load. */
 class MarketDataLoadMatch
 {
-    public ?string $ask_price = null;
-    public ?string $ask_qty = null;
-    public ?string $bid_price = null;
-    public ?string $bid_qty = null;
-    public ?int $close_time = null;
+    public ?string $askPrice = null;
+    public ?string $askQty = null;
+    public ?string $bidPrice = null;
+    public ?string $bidQty = null;
+    public ?int $closeTime = null;
     public ?int $count = null;
-    public ?int $first_id = null;
-    public ?string $high_price = null;
-    public ?int $last_id = null;
-    public ?string $last_price = null;
-    public ?string $last_qty = null;
-    public ?string $low_price = null;
-    public ?string $open_price = null;
-    public ?int $open_time = null;
-    public ?string $prev_close_price = null;
-    public ?string $price_change = null;
-    public ?string $price_change_percent = null;
-    public ?string $quote_volume = null;
+    public ?int $firstId = null;
+    public ?string $highPrice = null;
+    public ?int $lastId = null;
+    public ?string $lastPrice = null;
+    public ?string $lastQty = null;
+    public ?string $lowPrice = null;
+    public ?string $openPrice = null;
+    public ?int $openTime = null;
+    public ?string $prevClosePrice = null;
+    public ?string $priceChange = null;
+    public ?string $priceChangePercent = null;
+    public ?string $quoteVolume = null;
     public ?string $symbol = null;
     public ?string $volume = null;
-    public ?string $weighted_avg_price = null;
+    public ?string $weightedAvgPrice = null;
 }
 

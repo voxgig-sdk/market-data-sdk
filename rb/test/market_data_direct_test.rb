@@ -59,11 +59,11 @@ def market_data_direct_setup(mockres)
   calls = []
 
   env = Runner.env_override({
-    "MARKETDATA_TEST_MARKET_DATA_ENTID" => {},
-    "MARKETDATA_TEST_LIVE" => "FALSE",
+    "MARKET_DATA_TEST_MARKET_DATA_ENTID" => {},
+    "MARKET_DATA_TEST_LIVE" => "FALSE",
   })
 
-  live = env["MARKETDATA_TEST_LIVE"] == "TRUE"
+  live = env["MARKET_DATA_TEST_LIVE"] == "TRUE"
 
   if live
     merged_opts = {

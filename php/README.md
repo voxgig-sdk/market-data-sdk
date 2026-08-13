@@ -35,7 +35,7 @@ $client = new MarketDataSDK();
 
 ```php
 try {
-    // load() returns the bare MarketData record (throws on error).
+    // load() returns the ENTITY — call data_get() for the MarketData record (throws on error).
     $marketdata = $client->MarketData()->load();
     print_r($marketdata);
 } catch (\Throwable $err) {
@@ -123,7 +123,8 @@ Create a mock client for unit testing — no server required:
 ```php
 $client = MarketDataSDK::test();
 
-// Entity ops return the bare mock record (throws on error).
+// Entity ops return the ENTITY (throws on error);
+// call data_get() for the mock record.
 $marketdata = $client->MarketData()->load();
 print_r($marketdata);
 ```
@@ -222,7 +223,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (an `array` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (an `array` for single-entity
 ops, a `list` for `list`) and throw on error. Wrap calls in
 `try`/`catch` to handle failures.
 
@@ -244,27 +245,27 @@ On error, `ok` is `false` and `$err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `ask_price` |  |
-| `ask_qty` |  |
-| `bid_price` |  |
-| `bid_qty` |  |
-| `close_time` |  |
+| `askPrice` |  |
+| `askQty` |  |
+| `bidPrice` |  |
+| `bidQty` |  |
+| `closeTime` |  |
 | `count` |  |
-| `first_id` |  |
-| `high_price` |  |
-| `last_id` |  |
-| `last_price` |  |
-| `last_qty` |  |
-| `low_price` |  |
-| `open_price` |  |
-| `open_time` |  |
-| `prev_close_price` |  |
-| `price_change` |  |
-| `price_change_percent` |  |
-| `quote_volume` |  |
+| `firstId` |  |
+| `highPrice` |  |
+| `lastId` |  |
+| `lastPrice` |  |
+| `lastQty` |  |
+| `lowPrice` |  |
+| `openPrice` |  |
+| `openTime` |  |
+| `prevClosePrice` |  |
+| `priceChange` |  |
+| `priceChangePercent` |  |
+| `quoteVolume` |  |
 | `symbol` |  |
 | `volume` |  |
-| `weighted_avg_price` |  |
+| `weightedAvgPrice` |  |
 
 Operations: Load.
 
@@ -289,32 +290,32 @@ Create an instance: `$market_data = $client->MarketData();`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `ask_price` | `string` |  |
-| `ask_qty` | `string` |  |
-| `bid_price` | `string` |  |
-| `bid_qty` | `string` |  |
-| `close_time` | `int` |  |
+| `askPrice` | `string` |  |
+| `askQty` | `string` |  |
+| `bidPrice` | `string` |  |
+| `bidQty` | `string` |  |
+| `closeTime` | `int` |  |
 | `count` | `int` |  |
-| `first_id` | `int` |  |
-| `high_price` | `string` |  |
-| `last_id` | `int` |  |
-| `last_price` | `string` |  |
-| `last_qty` | `string` |  |
-| `low_price` | `string` |  |
-| `open_price` | `string` |  |
-| `open_time` | `int` |  |
-| `prev_close_price` | `string` |  |
-| `price_change` | `string` |  |
-| `price_change_percent` | `string` |  |
-| `quote_volume` | `string` |  |
+| `firstId` | `int` |  |
+| `highPrice` | `string` |  |
+| `lastId` | `int` |  |
+| `lastPrice` | `string` |  |
+| `lastQty` | `string` |  |
+| `lowPrice` | `string` |  |
+| `openPrice` | `string` |  |
+| `openTime` | `int` |  |
+| `prevClosePrice` | `string` |  |
+| `priceChange` | `string` |  |
+| `priceChangePercent` | `string` |  |
+| `quoteVolume` | `string` |  |
 | `symbol` | `string` |  |
 | `volume` | `string` |  |
-| `weighted_avg_price` | `string` |  |
+| `weightedAvgPrice` | `string` |  |
 
 #### Example: Load
 
 ```php
-// load() returns the bare MarketData record (throws on error).
+// load() returns the ENTITY — call data_get() for the MarketData record (throws on error).
 $market_data = $client->MarketData()->load();
 ```
 

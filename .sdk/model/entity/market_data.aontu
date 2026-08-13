@@ -6,27 +6,27 @@ main: kit: entity: market_data: {
 
   fields: [
     {
-      name: "ask_price"
+      name: "askPrice"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "ask_qty"
+      name: "askQty"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "bid_price"
+      name: "bidPrice"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "bid_qty"
+      name: "bidQty"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "close_time"
+      name: "closeTime"
       req: false
       type: "`$INTEGER`"
     }
@@ -36,62 +36,62 @@ main: kit: entity: market_data: {
       type: "`$INTEGER`"
     }
     {
-      name: "first_id"
+      name: "firstId"
       req: false
       type: "`$INTEGER`"
     }
     {
-      name: "high_price"
+      name: "highPrice"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "last_id"
+      name: "lastId"
       req: false
       type: "`$INTEGER`"
     }
     {
-      name: "last_price"
+      name: "lastPrice"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "last_qty"
+      name: "lastQty"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "low_price"
+      name: "lowPrice"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "open_price"
+      name: "openPrice"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "open_time"
+      name: "openTime"
       req: false
       type: "`$INTEGER`"
     }
     {
-      name: "prev_close_price"
+      name: "prevClosePrice"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "price_change"
+      name: "priceChange"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "price_change_percent"
+      name: "priceChangePercent"
       req: false
       type: "`$STRING`"
     }
     {
-      name: "quote_volume"
+      name: "quoteVolume"
       req: false
       type: "`$STRING`"
     }
@@ -106,7 +106,7 @@ main: kit: entity: market_data: {
       type: "`$STRING`"
     }
     {
-      name: "weighted_avg_price"
+      name: "weightedAvgPrice"
       req: false
       type: "`$STRING`"
     }

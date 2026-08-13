@@ -38,7 +38,7 @@ client = MarketDataSDK()
 
 ### 3. Load a marketdata
 
-`load()` returns the bare record (a `dict`) and raises on error.
+`load()` returns the ENTITY — call data_get() for the record — and raises on error.
 
 ```python
 try:
@@ -122,7 +122,8 @@ Create a mock client for unit testing — no server required:
 ```python
 client = MarketDataSDK.test()
 
-# Entity ops return the bare record and raise on error.
+# Entity ops return the ENTITY and raises on error;
+# call data_get() for the record.
 marketdata = client.MarketData().load()
 # marketdata contains the mock response record
 ```
@@ -218,7 +219,7 @@ All entities share the same interface.
 
 ### Result shape
 
-Entity operations return the bare result data (a `dict` for single-entity
+Entity operations return the ENTITY (call data_get() for the record) (a `dict` for single-entity
 ops, a `list` for `list`) and raise on error. Wrap calls in
 `try`/`except` to handle failures.
 
@@ -240,27 +241,27 @@ On error, `ok` is `False` and `err` contains the error value.
 
 | Field | Description |
 | --- | --- |
-| `ask_price` |  |
-| `ask_qty` |  |
-| `bid_price` |  |
-| `bid_qty` |  |
-| `close_time` |  |
+| `askPrice` |  |
+| `askQty` |  |
+| `bidPrice` |  |
+| `bidQty` |  |
+| `closeTime` |  |
 | `count` |  |
-| `first_id` |  |
-| `high_price` |  |
-| `last_id` |  |
-| `last_price` |  |
-| `last_qty` |  |
-| `low_price` |  |
-| `open_price` |  |
-| `open_time` |  |
-| `prev_close_price` |  |
-| `price_change` |  |
-| `price_change_percent` |  |
-| `quote_volume` |  |
+| `firstId` |  |
+| `highPrice` |  |
+| `lastId` |  |
+| `lastPrice` |  |
+| `lastQty` |  |
+| `lowPrice` |  |
+| `openPrice` |  |
+| `openTime` |  |
+| `prevClosePrice` |  |
+| `priceChange` |  |
+| `priceChangePercent` |  |
+| `quoteVolume` |  |
 | `symbol` |  |
 | `volume` |  |
-| `weighted_avg_price` |  |
+| `weightedAvgPrice` |  |
 
 Operations: Load.
 
@@ -285,27 +286,27 @@ Create an instance: `market_data = client.MarketData()`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `ask_price` | `str` |  |
-| `ask_qty` | `str` |  |
-| `bid_price` | `str` |  |
-| `bid_qty` | `str` |  |
-| `close_time` | `int` |  |
+| `askPrice` | `str` |  |
+| `askQty` | `str` |  |
+| `bidPrice` | `str` |  |
+| `bidQty` | `str` |  |
+| `closeTime` | `int` |  |
 | `count` | `int` |  |
-| `first_id` | `int` |  |
-| `high_price` | `str` |  |
-| `last_id` | `int` |  |
-| `last_price` | `str` |  |
-| `last_qty` | `str` |  |
-| `low_price` | `str` |  |
-| `open_price` | `str` |  |
-| `open_time` | `int` |  |
-| `prev_close_price` | `str` |  |
-| `price_change` | `str` |  |
-| `price_change_percent` | `str` |  |
-| `quote_volume` | `str` |  |
+| `firstId` | `int` |  |
+| `highPrice` | `str` |  |
+| `lastId` | `int` |  |
+| `lastPrice` | `str` |  |
+| `lastQty` | `str` |  |
+| `lowPrice` | `str` |  |
+| `openPrice` | `str` |  |
+| `openTime` | `int` |  |
+| `prevClosePrice` | `str` |  |
+| `priceChange` | `str` |  |
+| `priceChangePercent` | `str` |  |
+| `quoteVolume` | `str` |  |
 | `symbol` | `str` |  |
 | `volume` | `str` |  |
-| `weighted_avg_price` | `str` |  |
+| `weightedAvgPrice` | `str` |  |
 
 #### Example: Load
 

@@ -225,27 +225,27 @@ Only `direct()` returns a response envelope — a `table` with `ok`,
 
 | Field | Description |
 | --- | --- |
-| `ask_price` |  |
-| `ask_qty` |  |
-| `bid_price` |  |
-| `bid_qty` |  |
-| `close_time` |  |
+| `askPrice` |  |
+| `askQty` |  |
+| `bidPrice` |  |
+| `bidQty` |  |
+| `closeTime` |  |
 | `count` |  |
-| `first_id` |  |
-| `high_price` |  |
-| `last_id` |  |
-| `last_price` |  |
-| `last_qty` |  |
-| `low_price` |  |
-| `open_price` |  |
-| `open_time` |  |
-| `prev_close_price` |  |
-| `price_change` |  |
-| `price_change_percent` |  |
-| `quote_volume` |  |
+| `firstId` |  |
+| `highPrice` |  |
+| `lastId` |  |
+| `lastPrice` |  |
+| `lastQty` |  |
+| `lowPrice` |  |
+| `openPrice` |  |
+| `openTime` |  |
+| `prevClosePrice` |  |
+| `priceChange` |  |
+| `priceChangePercent` |  |
+| `quoteVolume` |  |
 | `symbol` |  |
 | `volume` |  |
-| `weighted_avg_price` |  |
+| `weightedAvgPrice` |  |
 
 Operations: Load.
 
@@ -270,27 +270,27 @@ Create an instance: `local market_data = client:MarketData(nil)`
 
 | Field | Type | Description |
 | --- | --- | --- |
-| `ask_price` | `string` |  |
-| `ask_qty` | `string` |  |
-| `bid_price` | `string` |  |
-| `bid_qty` | `string` |  |
-| `close_time` | `number` |  |
+| `askPrice` | `string` |  |
+| `askQty` | `string` |  |
+| `bidPrice` | `string` |  |
+| `bidQty` | `string` |  |
+| `closeTime` | `number` |  |
 | `count` | `number` |  |
-| `first_id` | `number` |  |
-| `high_price` | `string` |  |
-| `last_id` | `number` |  |
-| `last_price` | `string` |  |
-| `last_qty` | `string` |  |
-| `low_price` | `string` |  |
-| `open_price` | `string` |  |
-| `open_time` | `number` |  |
-| `prev_close_price` | `string` |  |
-| `price_change` | `string` |  |
-| `price_change_percent` | `string` |  |
-| `quote_volume` | `string` |  |
+| `firstId` | `number` |  |
+| `highPrice` | `string` |  |
+| `lastId` | `number` |  |
+| `lastPrice` | `string` |  |
+| `lastQty` | `string` |  |
+| `lowPrice` | `string` |  |
+| `openPrice` | `string` |  |
+| `openTime` | `number` |  |
+| `prevClosePrice` | `string` |  |
+| `priceChange` | `string` |  |
+| `priceChangePercent` | `string` |  |
+| `quoteVolume` | `string` |  |
 | `symbol` | `string` |  |
 | `volume` | `string` |  |
-| `weighted_avg_price` | `string` |  |
+| `weightedAvgPrice` | `string` |  |
 
 #### Example: Load
 

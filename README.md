@@ -38,9 +38,18 @@ network, and no credentials:
 ### TypeScript
 
 ```ts
-const client = MarketDataSDK.test()
+// The offline mock starts EMPTY — seed it with the records the test needs.
+// Shape: { entity: { <entity-name>: { <id>: <record> } } }
+const client = MarketDataSDK.test({
+  entity: {
+    market_data: {
+      test01: { id: 'test01' },
+    },
+  },
+})
 const marketdata = await client.MarketData().load()
-// marketdata is a bare MarketData populated with mock data
+// marketdata is the MarketData entity, populated with mock data
+// — call marketdata.data() for the record itself
 console.log(marketdata)
 ```
 
@@ -182,7 +191,7 @@ require_once 'marketdata_sdk.php';
 $client = new MarketDataSDK();
 
 
-// Load a specific marketdata (returns the bare record; throws on error)
+// Load a specific marketdata (returns the ENTITY; call data_get() for the record; throws on error)
 $marketdata = $client->MarketData()->load();
 print_r($marketdata);
 ```
@@ -210,7 +219,7 @@ require_relative "MarketData_sdk"
 client = MarketDataSDK.new
 
 
-# Load a specific marketdata (returns the bare record; raises on error)
+# Load a specific marketdata (returns the ENTITY; call data_get for the record)
 marketdata = client.MarketData.load()
 puts marketdata
 ```
@@ -344,6 +353,9 @@ Pass custom features via the `extend` option at construction time.
 
 This SDK is generated from the upstream OpenAPI specification. It is an
 unofficial client and is not affiliated with the API provider.
+
+The OpenAPI spec(s) this SDK was generated from are kept in the
+[`.sdk/def/`](.sdk/def/) folder.
 
 - Upstream API: [https://github.com/l0v3m0n3y/binancevision](https://github.com/l0v3m0n3y/binancevision)
 

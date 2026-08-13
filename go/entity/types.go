@@ -6,56 +6,60 @@
 // @voxgig/apidef VALID_CANON). Do not edit by hand.
 package entity
 
-import "encoding/json"
+import (
+	"encoding/json"
+
+	"github.com/voxgig-sdk/market-data-sdk/go/core"
+)
 
 // MarketData is the typed data model for the market_data entity.
 type MarketData struct {
-	AskPrice *string `json:"ask_price,omitempty"`
-	AskQty *string `json:"ask_qty,omitempty"`
-	BidPrice *string `json:"bid_price,omitempty"`
-	BidQty *string `json:"bid_qty,omitempty"`
-	CloseTime *int `json:"close_time,omitempty"`
+	AskPrice *string `json:"askPrice,omitempty"`
+	AskQty *string `json:"askQty,omitempty"`
+	BidPrice *string `json:"bidPrice,omitempty"`
+	BidQty *string `json:"bidQty,omitempty"`
+	CloseTime *int `json:"closeTime,omitempty"`
 	Count *int `json:"count,omitempty"`
-	FirstId *int `json:"first_id,omitempty"`
-	HighPrice *string `json:"high_price,omitempty"`
-	LastId *int `json:"last_id,omitempty"`
-	LastPrice *string `json:"last_price,omitempty"`
-	LastQty *string `json:"last_qty,omitempty"`
-	LowPrice *string `json:"low_price,omitempty"`
-	OpenPrice *string `json:"open_price,omitempty"`
-	OpenTime *int `json:"open_time,omitempty"`
-	PrevClosePrice *string `json:"prev_close_price,omitempty"`
-	PriceChange *string `json:"price_change,omitempty"`
-	PriceChangePercent *string `json:"price_change_percent,omitempty"`
-	QuoteVolume *string `json:"quote_volume,omitempty"`
+	FirstId *int `json:"firstId,omitempty"`
+	HighPrice *string `json:"highPrice,omitempty"`
+	LastId *int `json:"lastId,omitempty"`
+	LastPrice *string `json:"lastPrice,omitempty"`
+	LastQty *string `json:"lastQty,omitempty"`
+	LowPrice *string `json:"lowPrice,omitempty"`
+	OpenPrice *string `json:"openPrice,omitempty"`
+	OpenTime *int `json:"openTime,omitempty"`
+	PrevClosePrice *string `json:"prevClosePrice,omitempty"`
+	PriceChange *string `json:"priceChange,omitempty"`
+	PriceChangePercent *string `json:"priceChangePercent,omitempty"`
+	QuoteVolume *string `json:"quoteVolume,omitempty"`
 	Symbol *string `json:"symbol,omitempty"`
 	Volume *string `json:"volume,omitempty"`
-	WeightedAvgPrice *string `json:"weighted_avg_price,omitempty"`
+	WeightedAvgPrice *string `json:"weightedAvgPrice,omitempty"`
 }
 
 // MarketDataLoadMatch is the typed request payload for MarketData.LoadTyped.
 type MarketDataLoadMatch struct {
-	AskPrice *string `json:"ask_price,omitempty"`
-	AskQty *string `json:"ask_qty,omitempty"`
-	BidPrice *string `json:"bid_price,omitempty"`
-	BidQty *string `json:"bid_qty,omitempty"`
-	CloseTime *int `json:"close_time,omitempty"`
+	AskPrice *string `json:"askPrice,omitempty"`
+	AskQty *string `json:"askQty,omitempty"`
+	BidPrice *string `json:"bidPrice,omitempty"`
+	BidQty *string `json:"bidQty,omitempty"`
+	CloseTime *int `json:"closeTime,omitempty"`
 	Count *int `json:"count,omitempty"`
-	FirstId *int `json:"first_id,omitempty"`
-	HighPrice *string `json:"high_price,omitempty"`
-	LastId *int `json:"last_id,omitempty"`
-	LastPrice *string `json:"last_price,omitempty"`
-	LastQty *string `json:"last_qty,omitempty"`
-	LowPrice *string `json:"low_price,omitempty"`
-	OpenPrice *string `json:"open_price,omitempty"`
-	OpenTime *int `json:"open_time,omitempty"`
-	PrevClosePrice *string `json:"prev_close_price,omitempty"`
-	PriceChange *string `json:"price_change,omitempty"`
-	PriceChangePercent *string `json:"price_change_percent,omitempty"`
-	QuoteVolume *string `json:"quote_volume,omitempty"`
+	FirstId *int `json:"firstId,omitempty"`
+	HighPrice *string `json:"highPrice,omitempty"`
+	LastId *int `json:"lastId,omitempty"`
+	LastPrice *string `json:"lastPrice,omitempty"`
+	LastQty *string `json:"lastQty,omitempty"`
+	LowPrice *string `json:"lowPrice,omitempty"`
+	OpenPrice *string `json:"openPrice,omitempty"`
+	OpenTime *int `json:"openTime,omitempty"`
+	PrevClosePrice *string `json:"prevClosePrice,omitempty"`
+	PriceChange *string `json:"priceChange,omitempty"`
+	PriceChangePercent *string `json:"priceChangePercent,omitempty"`
+	QuoteVolume *string `json:"quoteVolume,omitempty"`
 	Symbol *string `json:"symbol,omitempty"`
 	Volume *string `json:"volume,omitempty"`
-	WeightedAvgPrice *string `json:"weighted_avg_price,omitempty"`
+	WeightedAvgPrice *string `json:"weightedAvgPrice,omitempty"`
 }
 
 // asMap turns a typed request/data struct into the map[string]any the
@@ -70,12 +74,26 @@ func asMap(v any) map[string]any {
 	return out
 }
 
-// typedFrom decodes a runtime value (a map[string]any produced by the op
-// pipeline) into a typed model T via a JSON round-trip. On any error it
-// returns the zero value of T; the op's own (value, error) tuple carries the
-// real error.
+// entityData unwraps an entity to its data map.
+//
+// Operations resolve to the ENTITY, not the raw data (see AGENTS.md), and an
+// entity's fields are UNEXPORTED — marshalling one directly yields `{}`, so
+// every typed accessor would silently hand back a zero-valued struct. The
+// typed boundary therefore takes the data hop first.
+func entityData(v any) any {
+	if ent, ok := v.(core.Entity); ok {
+		return ent.Data()
+	}
+	return v
+}
+
+// typedFrom decodes a runtime value (an entity, or the map[string]any the op
+// pipeline produced) into a typed model T via a JSON round-trip. On any error
+// it returns the zero value of T; the op's own (value, error) tuple carries
+// the real error.
 func typedFrom[T any](v any) T {
 	var out T
+	v = entityData(v)
 	if v == nil {
 		return out
 	}
@@ -87,12 +105,20 @@ func typedFrom[T any](v any) T {
 	return out
 }
 
-// typedSliceFrom decodes a runtime list value ([]any of maps) into a typed
-// slice []T via a JSON round-trip, for list ops.
+// typedSliceFrom decodes a runtime list value into a typed slice []T via a
+// JSON round-trip, for list ops. `list` resolves to a slice of ENTITY
+// instances, so each element takes the data hop.
 func typedSliceFrom[T any](v any) []T {
 	var out []T
 	if v == nil {
 		return out
+	}
+	if list, ok := v.([]any); ok {
+		unwrapped := make([]any, 0, len(list))
+		for _, item := range list {
+			unwrapped = append(unwrapped, entityData(item))
+		}
+		v = unwrapped
 	}
 	b, err := json.Marshal(v)
 	if err != nil {

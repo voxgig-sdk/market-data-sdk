@@ -92,27 +92,27 @@ $market_data = $client->MarketData();
 
 | Field | Type | Required | Description |
 | --- | --- | --- | --- |
-| `ask_price` | `string` | No |  |
-| `ask_qty` | `string` | No |  |
-| `bid_price` | `string` | No |  |
-| `bid_qty` | `string` | No |  |
-| `close_time` | `int` | No |  |
+| `askPrice` | `string` | No |  |
+| `askQty` | `string` | No |  |
+| `bidPrice` | `string` | No |  |
+| `bidQty` | `string` | No |  |
+| `closeTime` | `int` | No |  |
 | `count` | `int` | No |  |
-| `first_id` | `int` | No |  |
-| `high_price` | `string` | No |  |
-| `last_id` | `int` | No |  |
-| `last_price` | `string` | No |  |
-| `last_qty` | `string` | No |  |
-| `low_price` | `string` | No |  |
-| `open_price` | `string` | No |  |
-| `open_time` | `int` | No |  |
-| `prev_close_price` | `string` | No |  |
-| `price_change` | `string` | No |  |
-| `price_change_percent` | `string` | No |  |
-| `quote_volume` | `string` | No |  |
+| `firstId` | `int` | No |  |
+| `highPrice` | `string` | No |  |
+| `lastId` | `int` | No |  |
+| `lastPrice` | `string` | No |  |
+| `lastQty` | `string` | No |  |
+| `lowPrice` | `string` | No |  |
+| `openPrice` | `string` | No |  |
+| `openTime` | `int` | No |  |
+| `prevClosePrice` | `string` | No |  |
+| `priceChange` | `string` | No |  |
+| `priceChangePercent` | `string` | No |  |
+| `quoteVolume` | `string` | No |  |
 | `symbol` | `string` | No |  |
 | `volume` | `string` | No |  |
-| `weighted_avg_price` | `string` | No |  |
+| `weightedAvgPrice` | `string` | No |  |
 
 ### Operations
 

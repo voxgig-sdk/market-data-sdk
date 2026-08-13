@@ -43,8 +43,8 @@ class MarketDataTestRunner
 
     public static function env_override(array $m): array
     {
-        $live = self::getenv('MARKETDATA_TEST_LIVE');
-        $override = self::getenv('MARKETDATA_TEST_OVERRIDE');
+        $live = self::getenv('MARKET_DATA_TEST_LIVE');
+        $override = self::getenv('MARKET_DATA_TEST_OVERRIDE');
 
         if ($live === 'TRUE' || $override === 'TRUE') {
             foreach (array_keys($m) as $key) {
@@ -63,9 +63,9 @@ class MarketDataTestRunner
             }
         }
 
-        $explain = self::getenv('MARKETDATA_TEST_EXPLAIN');
+        $explain = self::getenv('MARKET_DATA_TEST_EXPLAIN');
         if ($explain !== null && $explain !== '') {
-            $m['MARKETDATA_TEST_EXPLAIN'] = $explain;
+            $m['MARKET_DATA_TEST_EXPLAIN'] = $explain;
         }
 
         return $m;
