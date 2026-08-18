@@ -40,7 +40,7 @@ class MarketDataSDK
         $utility = new MarketDataUtility();
         $this->_utility = $utility;
 
-        $config = MarketDataConfig::make_config();
+        $config = MarketDataConfig::shared_config();
 
         $this->_rootctx = ($utility->make_context)([
             "client" => $this,

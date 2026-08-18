@@ -36,7 +36,7 @@ class Config {
 
 
   options = {
-    base: 'https://data-api.binance.vision',
+    base: "https://data-api.binance.vision",
 
     headers: {
       "content-type": "application/json"
@@ -55,151 +55,88 @@ class Config {
     "market_data": {
       "fields": [
         {
-          "active": true,
           "name": "askPrice",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 0
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "askQty",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 1
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "bidPrice",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 2
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "bidQty",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 3
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "closeTime",
-          "req": false,
-          "type": "`$INTEGER`",
-          "index$": 4
+          "type": "`$INTEGER`"
         },
         {
-          "active": true,
           "name": "count",
-          "req": false,
-          "type": "`$INTEGER`",
-          "index$": 5
+          "type": "`$INTEGER`"
         },
         {
-          "active": true,
           "name": "firstId",
-          "req": false,
-          "type": "`$INTEGER`",
-          "index$": 6
+          "type": "`$INTEGER`"
         },
         {
-          "active": true,
           "name": "highPrice",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 7
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "lastId",
-          "req": false,
-          "type": "`$INTEGER`",
-          "index$": 8
+          "type": "`$INTEGER`"
         },
         {
-          "active": true,
           "name": "lastPrice",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 9
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "lastQty",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 10
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "lowPrice",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 11
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "openPrice",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 12
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "openTime",
-          "req": false,
-          "type": "`$INTEGER`",
-          "index$": 13
+          "type": "`$INTEGER`"
         },
         {
-          "active": true,
           "name": "prevClosePrice",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 14
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "priceChange",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 15
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "priceChangePercent",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 16
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "quoteVolume",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 17
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "symbol",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 18
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "volume",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 19
+          "type": "`$STRING`"
         },
         {
-          "active": true,
           "name": "weightedAvgPrice",
-          "req": false,
-          "type": "`$STRING`",
-          "index$": 20
+          "type": "`$STRING`"
         }
       ],
       "name": "market_data",
@@ -209,34 +146,27 @@ class Config {
           "name": "load",
           "points": [
             {
-              "active": true,
               "args": {
                 "query": [
                   {
-                    "active": true,
                     "example": "BTCUSDT",
                     "kind": "query",
                     "name": "symbol",
                     "orig": "symbol",
-                    "reqd": false,
                     "type": "`$STRING`"
                   },
                   {
-                    "active": true,
                     "example": "[\"BTCUSDT\",\"ETHUSDT\"]",
                     "kind": "query",
                     "name": "symbol",
                     "orig": "symbol",
-                    "reqd": false,
                     "type": "`$STRING`"
                   },
                   {
-                    "active": true,
                     "example": "FULL",
                     "kind": "query",
                     "name": "type",
                     "orig": "type",
-                    "reqd": false,
                     "type": "`$STRING`"
                   }
                 ]
@@ -259,11 +189,9 @@ class Config {
               "transform": {
                 "req": "`reqdata`",
                 "res": "`body`"
-              },
-              "index$": 0
+              }
             }
-          ],
-          "key$": "load"
+          ]
         }
       },
       "relations": {

@@ -28,7 +28,7 @@ class MarketDataSDK
     utility = MarketDataUtility.new
     @_utility = utility
 
-    config = MarketDataConfig.make_config
+    config = MarketDataConfig.shared_config
 
     @_rootctx = utility.make_context.call({
       "client" => self,
