@@ -33,6 +33,9 @@ class MarketDataConfig
         return [
             "main" => [
                 "name" => "MarketData",
+                "slug" => "market-data",
+                "version" => "0.0.1",
+                "target" => "php",
             ],
             "feature" => [
                 "test" => [
