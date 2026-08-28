@@ -41,24 +41,5 @@ class MarketData(TypedDict, total=False):
 
 
 class MarketDataLoadMatch(TypedDict, total=False):
-    askPrice: str
-    askQty: str
-    bidPrice: str
-    bidQty: str
-    closeTime: int
-    count: int
-    firstId: int
-    highPrice: str
-    lastId: int
-    lastPrice: str
-    lastQty: str
-    lowPrice: str
-    openPrice: str
-    openTime: int
-    prevClosePrice: str
-    priceChange: str
-    priceChangePercent: str
-    quoteVolume: str
     symbol: str
-    volume: str
-    weightedAvgPrice: str
+    type: str

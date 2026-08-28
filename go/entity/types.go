@@ -39,27 +39,8 @@ type MarketData struct {
 
 // MarketDataLoadMatch is the typed request payload for MarketData.LoadTyped.
 type MarketDataLoadMatch struct {
-	AskPrice *string `json:"askPrice,omitempty"`
-	AskQty *string `json:"askQty,omitempty"`
-	BidPrice *string `json:"bidPrice,omitempty"`
-	BidQty *string `json:"bidQty,omitempty"`
-	CloseTime *int `json:"closeTime,omitempty"`
-	Count *int `json:"count,omitempty"`
-	FirstId *int `json:"firstId,omitempty"`
-	HighPrice *string `json:"highPrice,omitempty"`
-	LastId *int `json:"lastId,omitempty"`
-	LastPrice *string `json:"lastPrice,omitempty"`
-	LastQty *string `json:"lastQty,omitempty"`
-	LowPrice *string `json:"lowPrice,omitempty"`
-	OpenPrice *string `json:"openPrice,omitempty"`
-	OpenTime *int `json:"openTime,omitempty"`
-	PrevClosePrice *string `json:"prevClosePrice,omitempty"`
-	PriceChange *string `json:"priceChange,omitempty"`
-	PriceChangePercent *string `json:"priceChangePercent,omitempty"`
-	QuoteVolume *string `json:"quoteVolume,omitempty"`
 	Symbol *string `json:"symbol,omitempty"`
-	Volume *string `json:"volume,omitempty"`
-	WeightedAvgPrice *string `json:"weightedAvgPrice,omitempty"`
+	Type *string `json:"type,omitempty"`
 }
 
 // asMap turns a typed request/data struct into the map[string]any the

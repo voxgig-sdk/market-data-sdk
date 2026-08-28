@@ -41,26 +41,7 @@ class MarketData
 /** Request payload for MarketData#load. */
 class MarketDataLoadMatch
 {
-    public ?string $askPrice = null;
-    public ?string $askQty = null;
-    public ?string $bidPrice = null;
-    public ?string $bidQty = null;
-    public ?int $closeTime = null;
-    public ?int $count = null;
-    public ?int $firstId = null;
-    public ?string $highPrice = null;
-    public ?int $lastId = null;
-    public ?string $lastPrice = null;
-    public ?string $lastQty = null;
-    public ?string $lowPrice = null;
-    public ?string $openPrice = null;
-    public ?int $openTime = null;
-    public ?string $prevClosePrice = null;
-    public ?string $priceChange = null;
-    public ?string $priceChangePercent = null;
-    public ?string $quoteVolume = null;
     public ?string $symbol = null;
-    public ?string $volume = null;
-    public ?string $weightedAvgPrice = null;
+    public ?string $type = null;
 }
 

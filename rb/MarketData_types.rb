@@ -99,90 +99,14 @@ MarketData = Struct.new(
 
 # Request payload for MarketData#load.
 #
-# @!attribute [rw] askPrice
-#   @return [String, nil]
-#
-# @!attribute [rw] askQty
-#   @return [String, nil]
-#
-# @!attribute [rw] bidPrice
-#   @return [String, nil]
-#
-# @!attribute [rw] bidQty
-#   @return [String, nil]
-#
-# @!attribute [rw] closeTime
-#   @return [Integer, nil]
-#
-# @!attribute [rw] count
-#   @return [Integer, nil]
-#
-# @!attribute [rw] firstId
-#   @return [Integer, nil]
-#
-# @!attribute [rw] highPrice
-#   @return [String, nil]
-#
-# @!attribute [rw] lastId
-#   @return [Integer, nil]
-#
-# @!attribute [rw] lastPrice
-#   @return [String, nil]
-#
-# @!attribute [rw] lastQty
-#   @return [String, nil]
-#
-# @!attribute [rw] lowPrice
-#   @return [String, nil]
-#
-# @!attribute [rw] openPrice
-#   @return [String, nil]
-#
-# @!attribute [rw] openTime
-#   @return [Integer, nil]
-#
-# @!attribute [rw] prevClosePrice
-#   @return [String, nil]
-#
-# @!attribute [rw] priceChange
-#   @return [String, nil]
-#
-# @!attribute [rw] priceChangePercent
-#   @return [String, nil]
-#
-# @!attribute [rw] quoteVolume
-#   @return [String, nil]
-#
 # @!attribute [rw] symbol
 #   @return [String, nil]
 #
-# @!attribute [rw] volume
-#   @return [String, nil]
-#
-# @!attribute [rw] weightedAvgPrice
+# @!attribute [rw] type
 #   @return [String, nil]
 MarketDataLoadMatch = Struct.new(
-  :askPrice,
-  :askQty,
-  :bidPrice,
-  :bidQty,
-  :closeTime,
-  :count,
-  :firstId,
-  :highPrice,
-  :lastId,
-  :lastPrice,
-  :lastQty,
-  :lowPrice,
-  :openPrice,
-  :openTime,
-  :prevClosePrice,
-  :priceChange,
-  :priceChangePercent,
-  :quoteVolume,
   :symbol,
-  :volume,
-  :weightedAvgPrice,
+  :type,
   keyword_init: true
 )
 
