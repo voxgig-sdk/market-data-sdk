@@ -151,11 +151,19 @@ local function make_config()
                 ["kind"] = "http",
                 ["method"] = "GET",
                 ["orig"] = "/api/v3/ticker/24hr",
-                ["parts"] = {
-                  "api",
-                  "v3",
-                  "ticker",
-                  "24hr",
+                ["segments"] = {
+                  {
+                    ["lit"] = "api",
+                  },
+                  {
+                    ["lit"] = "v3",
+                  },
+                  {
+                    ["lit"] = "ticker",
+                  },
+                  {
+                    ["lit"] = "24hr",
+                  },
                 },
                 ["select"] = {
                   ["exist"] = {
@@ -166,6 +174,12 @@ local function make_config()
                 ["transform"] = {
                   ["req"] = "`reqdata`",
                   ["res"] = "`body`",
+                },
+                ["parts"] = {
+                  "api",
+                  "v3",
+                  "ticker",
+                  "24hr",
                 },
               },
             },
