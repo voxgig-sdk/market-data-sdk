@@ -105,7 +105,7 @@ local result, err = client:MarketData():load()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/market-data` | publish pending — [install from git tag](https://github.com/voxgig-sdk/market-data-sdk/releases) |
+| TypeScript | `@voxgig-sdk/market-data-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/market-data-sdk/releases) |
 | Python | `voxgig-sdk-market-data` | publish pending — [install from git tag](https://github.com/voxgig-sdk/market-data-sdk/releases) |
 | PHP | `voxgig-sdk/market-data` | publish pending — [install from git tag](https://github.com/voxgig-sdk/market-data-sdk/releases) |
 | Golang | `github.com/voxgig-sdk/market-data-sdk/go` | `go get github.com/voxgig-sdk/market-data-sdk/go@latest` |
@@ -119,7 +119,7 @@ local result, err = client:MarketData():load()
 ### TypeScript
 
 ```ts
-import { MarketDataSDK } from '@voxgig-sdk/market-data'
+import { MarketDataSDK } from '@voxgig-sdk/market-data-sdk'
 
 const client = new MarketDataSDK()
 

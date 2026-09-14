@@ -28,7 +28,7 @@ loading a specific record.
 ### 1. Create a client
 
 ```ts
-import { MarketDataSDK } from '@voxgig-sdk/market-data'
+import { MarketDataSDK } from '@voxgig-sdk/market-data-sdk'
 
 const client = new MarketDataSDK()
 ```
@@ -441,7 +441,7 @@ market-data/
 Import the SDK from the package root:
 
 ```ts
-import { MarketDataSDK } from '@voxgig-sdk/market-data'
+import { MarketDataSDK } from '@voxgig-sdk/market-data-sdk'
 ```
 
 ### Entity state
