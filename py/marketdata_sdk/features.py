@@ -1,12 +1,18 @@
 # MarketData SDK feature factory
 
 from marketdata_sdk.feature.base_feature import MarketDataBaseFeature
+from marketdata_sdk.feature.ratelimit_feature import MarketDataRatelimitFeature
+from marketdata_sdk.feature.retry_feature import MarketDataRetryFeature
 from marketdata_sdk.feature.test_feature import MarketDataTestFeature
+from marketdata_sdk.feature.timeout_feature import MarketDataTimeoutFeature
 
 
 _FEATURES = {
     "base": lambda: MarketDataBaseFeature(),
+    "ratelimit": lambda: MarketDataRatelimitFeature(),
+    "retry": lambda: MarketDataRetryFeature(),
     "test": lambda: MarketDataTestFeature(),
+    "timeout": lambda: MarketDataTimeoutFeature(),
 }
 
 

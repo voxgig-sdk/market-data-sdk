@@ -4,7 +4,10 @@ declare(strict_types=1);
 // MarketData SDK feature factory
 
 require_once __DIR__ . '/feature/BaseFeature.php';
+require_once __DIR__ . '/feature/RatelimitFeature.php';
+require_once __DIR__ . '/feature/RetryFeature.php';
 require_once __DIR__ . '/feature/TestFeature.php';
+require_once __DIR__ . '/feature/TimeoutFeature.php';
 
 
 class MarketDataFeatures
@@ -14,8 +17,14 @@ class MarketDataFeatures
         switch ($name) {
             case "base":
                 return new MarketDataBaseFeature();
+            case "ratelimit":
+                return new MarketDataRatelimitFeature();
+            case "retry":
+                return new MarketDataRetryFeature();
             case "test":
                 return new MarketDataTestFeature();
+            case "timeout":
+                return new MarketDataTimeoutFeature();
             default:
                 return new MarketDataBaseFeature();
         }
@@ -31,7 +40,10 @@ class MarketDataFeatures
     {
         switch ($name) {
             case "base":
+            case "ratelimit":
+            case "retry":
             case "test":
+            case "timeout":
                 return true;
             default:
                 return false;

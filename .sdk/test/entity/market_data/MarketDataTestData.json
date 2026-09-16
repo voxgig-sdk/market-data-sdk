@@ -6,16 +6,16 @@
         "askQty": "sd3",
         "bidPrice": "sd4",
         "bidQty": "sd5",
-        "closeTime": "sd6",
-        "count": "sd7",
-        "firstId": "sd8",
+        "closeTime": 214,
+        "count": 215,
+        "firstId": 216,
         "highPrice": "sd9",
-        "lastId": "sda",
+        "lastId": 218,
         "lastPrice": "sdb",
         "lastQty": "sdc",
         "lowPrice": "sdd",
         "openPrice": "sde",
-        "openTime": "sdf",
+        "openTime": 223,
         "prevClosePrice": "se0",
         "priceChange": "se1",
         "priceChangePercent": "se2",
@@ -30,16 +30,16 @@
         "askQty": "s1a5",
         "bidPrice": "s1a6",
         "bidQty": "s1a7",
-        "closeTime": "s1a8",
-        "count": "s1a9",
-        "firstId": "s1aa",
+        "closeTime": 424,
+        "count": 425,
+        "firstId": 426,
         "highPrice": "s1ab",
-        "lastId": "s1ac",
+        "lastId": 428,
         "lastPrice": "s1ad",
         "lastQty": "s1ae",
         "lowPrice": "s1af",
         "openPrice": "s1b0",
-        "openTime": "s1b1",
+        "openTime": 433,
         "prevClosePrice": "s1b2",
         "priceChange": "s1b3",
         "priceChangePercent": "s1b4",
@@ -54,16 +54,16 @@
         "askQty": "s277",
         "bidPrice": "s278",
         "bidQty": "s279",
-        "closeTime": "s27a",
-        "count": "s27b",
-        "firstId": "s27c",
+        "closeTime": 634,
+        "count": 635,
+        "firstId": 636,
         "highPrice": "s27d",
-        "lastId": "s27e",
+        "lastId": 638,
         "lastPrice": "s27f",
         "lastQty": "s280",
         "lowPrice": "s281",
         "openPrice": "s282",
-        "openTime": "s283",
+        "openTime": 643,
         "prevClosePrice": "s284",
         "priceChange": "s285",
         "priceChangePercent": "s286",
@@ -82,16 +82,16 @@
         "askQty": "s349",
         "bidPrice": "s34a",
         "bidQty": "s34b",
-        "closeTime": "s34c",
-        "count": "s34d",
-        "firstId": "s34e",
+        "closeTime": 844,
+        "count": 845,
+        "firstId": 846,
         "highPrice": "s34f",
-        "lastId": "s350",
+        "lastId": 848,
         "lastPrice": "s351",
         "lastQty": "s352",
         "lowPrice": "s353",
         "openPrice": "s354",
-        "openTime": "s355",
+        "openTime": 853,
         "prevClosePrice": "s356",
         "priceChange": "s357",
         "priceChangePercent": "s358",
@@ -99,6 +99,425 @@
         "symbol": "s35a",
         "volume": "s35b",
         "weightedAvgPrice": "s35c"
+      }
+    }
+  },
+  "requests": {
+    "GET /api/v3/ticker/24hr": {
+      "provenance": "operation-contract",
+      "contract": {
+        "operationId": "getListTickers",
+        "parameters": [
+          {
+            "description": "Trading pair symbol (e.g., BTCUSDT). If omitted, returns data for all symbols.",
+            "in": "query",
+            "name": "symbol",
+            "required": false,
+            "schema": {
+              "example": "BTCUSDT",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Array of trading pair symbols as JSON string. Cannot be used with symbol parameter.",
+            "in": "query",
+            "name": "symbols",
+            "required": false,
+            "schema": {
+              "example": "[\"BTCUSDT\",\"ETHUSDT\"]",
+              "type": "string"
+            }
+          },
+          {
+            "description": "Ticker type (FULL or MINI). Defaults to FULL.",
+            "in": "query",
+            "name": "type",
+            "required": false,
+            "schema": {
+              "default": "FULL",
+              "enum": [
+                "FULL",
+                "MINI"
+              ],
+              "type": "string"
+            }
+          }
+        ],
+        "protocol": "http",
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "examples": {
+                  "multipleSymbols": {
+                    "summary": "Multiple symbols response",
+                    "value": [
+                      {
+                        "askPrice": "4.00000200",
+                        "askQty": "100.00000000",
+                        "bidPrice": "4.00000000",
+                        "bidQty": "100.00000000",
+                        "closeTime": 1499869899040,
+                        "count": 76,
+                        "firstId": 28385,
+                        "highPrice": "100.00000000",
+                        "lastId": 28460,
+                        "lastPrice": "4.00000200",
+                        "lastQty": "200.00000000",
+                        "lowPrice": "0.10000000",
+                        "openPrice": "99.00000000",
+                        "openTime": 1499783499040,
+                        "prevClosePrice": "0.10002000",
+                        "priceChange": "-94.99999800",
+                        "priceChangePercent": "-95.960",
+                        "quoteVolume": "15.30000000",
+                        "symbol": "BTCUSDT",
+                        "volume": "8913.30000000",
+                        "weightedAvgPrice": "0.29628482"
+                      }
+                    ]
+                  },
+                  "singleSymbol": {
+                    "summary": "Single symbol response",
+                    "value": {
+                      "askPrice": "4.00000200",
+                      "askQty": "100.00000000",
+                      "bidPrice": "4.00000000",
+                      "bidQty": "100.00000000",
+                      "closeTime": 1499869899040,
+                      "count": 76,
+                      "firstId": 28385,
+                      "highPrice": "100.00000000",
+                      "lastId": 28460,
+                      "lastPrice": "4.00000200",
+                      "lastQty": "200.00000000",
+                      "lowPrice": "0.10000000",
+                      "openPrice": "99.00000000",
+                      "openTime": 1499783499040,
+                      "prevClosePrice": "0.10002000",
+                      "priceChange": "-94.99999800",
+                      "priceChangePercent": "-95.960",
+                      "quoteVolume": "15.30000000",
+                      "symbol": "BTCUSDT",
+                      "volume": "8913.30000000",
+                      "weightedAvgPrice": "0.29628482"
+                    }
+                  }
+                },
+                "schema": {
+                  "oneOf": [
+                    {
+                      "items": {
+                        "description": "24-hour ticker price change statistics",
+                        "properties": {
+                          "askPrice": {
+                            "description": "Best ask price",
+                            "example": "4.00000200",
+                            "type": "string"
+                          },
+                          "askQty": {
+                            "description": "Best ask quantity",
+                            "example": "100.00000000",
+                            "type": "string"
+                          },
+                          "bidPrice": {
+                            "description": "Best bid price",
+                            "example": "4.00000000",
+                            "type": "string"
+                          },
+                          "bidQty": {
+                            "description": "Best bid quantity",
+                            "example": "100.00000000",
+                            "type": "string"
+                          },
+                          "closeTime": {
+                            "description": "Closing time timestamp (milliseconds)",
+                            "example": 1499869899040,
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "count": {
+                            "description": "Number of trades in the last 24 hours",
+                            "example": 76,
+                            "format": "int32",
+                            "type": "integer"
+                          },
+                          "firstId": {
+                            "description": "First trade ID",
+                            "example": 28385,
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "highPrice": {
+                            "description": "Highest price in the last 24 hours",
+                            "example": "100.00000000",
+                            "type": "string"
+                          },
+                          "lastId": {
+                            "description": "Last trade ID",
+                            "example": 28460,
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "lastPrice": {
+                            "description": "Last traded price",
+                            "example": "4.00000200",
+                            "type": "string"
+                          },
+                          "lastQty": {
+                            "description": "Last traded quantity",
+                            "example": "200.00000000",
+                            "type": "string"
+                          },
+                          "lowPrice": {
+                            "description": "Lowest price in the last 24 hours",
+                            "example": "0.10000000",
+                            "type": "string"
+                          },
+                          "openPrice": {
+                            "description": "Opening price 24 hours ago",
+                            "example": "99.00000000",
+                            "type": "string"
+                          },
+                          "openTime": {
+                            "description": "Opening time timestamp (milliseconds)",
+                            "example": 1499783499040,
+                            "format": "int64",
+                            "type": "integer"
+                          },
+                          "prevClosePrice": {
+                            "description": "Previous day's close price",
+                            "example": "0.10002000",
+                            "type": "string"
+                          },
+                          "priceChange": {
+                            "description": "Absolute price change in the last 24 hours",
+                            "example": "-94.99999800",
+                            "type": "string"
+                          },
+                          "priceChangePercent": {
+                            "description": "Percentage price change in the last 24 hours",
+                            "example": "-95.960",
+                            "type": "string"
+                          },
+                          "quoteVolume": {
+                            "description": "Total trading volume in quote asset",
+                            "example": "15.30000000",
+                            "type": "string"
+                          },
+                          "symbol": {
+                            "description": "Trading pair symbol",
+                            "example": "BTCUSDT",
+                            "type": "string"
+                          },
+                          "volume": {
+                            "description": "Total trading volume in base asset",
+                            "example": "8913.30000000",
+                            "type": "string"
+                          },
+                          "weightedAvgPrice": {
+                            "description": "Weighted average price over the last 24 hours",
+                            "example": "0.29628482",
+                            "type": "string"
+                          }
+                        },
+                        "type": "object"
+                      },
+                      "type": "array"
+                    },
+                    {
+                      "description": "24-hour ticker price change statistics",
+                      "properties": {
+                        "askPrice": {
+                          "description": "Best ask price",
+                          "example": "4.00000200",
+                          "type": "string"
+                        },
+                        "askQty": {
+                          "description": "Best ask quantity",
+                          "example": "100.00000000",
+                          "type": "string"
+                        },
+                        "bidPrice": {
+                          "description": "Best bid price",
+                          "example": "4.00000000",
+                          "type": "string"
+                        },
+                        "bidQty": {
+                          "description": "Best bid quantity",
+                          "example": "100.00000000",
+                          "type": "string"
+                        },
+                        "closeTime": {
+                          "description": "Closing time timestamp (milliseconds)",
+                          "example": 1499869899040,
+                          "format": "int64",
+                          "type": "integer"
+                        },
+                        "count": {
+                          "description": "Number of trades in the last 24 hours",
+                          "example": 76,
+                          "format": "int32",
+                          "type": "integer"
+                        },
+                        "firstId": {
+                          "description": "First trade ID",
+                          "example": 28385,
+                          "format": "int64",
+                          "type": "integer"
+                        },
+                        "highPrice": {
+                          "description": "Highest price in the last 24 hours",
+                          "example": "100.00000000",
+                          "type": "string"
+                        },
+                        "lastId": {
+                          "description": "Last trade ID",
+                          "example": 28460,
+                          "format": "int64",
+                          "type": "integer"
+                        },
+                        "lastPrice": {
+                          "description": "Last traded price",
+                          "example": "4.00000200",
+                          "type": "string"
+                        },
+                        "lastQty": {
+                          "description": "Last traded quantity",
+                          "example": "200.00000000",
+                          "type": "string"
+                        },
+                        "lowPrice": {
+                          "description": "Lowest price in the last 24 hours",
+                          "example": "0.10000000",
+                          "type": "string"
+                        },
+                        "openPrice": {
+                          "description": "Opening price 24 hours ago",
+                          "example": "99.00000000",
+                          "type": "string"
+                        },
+                        "openTime": {
+                          "description": "Opening time timestamp (milliseconds)",
+                          "example": 1499783499040,
+                          "format": "int64",
+                          "type": "integer"
+                        },
+                        "prevClosePrice": {
+                          "description": "Previous day's close price",
+                          "example": "0.10002000",
+                          "type": "string"
+                        },
+                        "priceChange": {
+                          "description": "Absolute price change in the last 24 hours",
+                          "example": "-94.99999800",
+                          "type": "string"
+                        },
+                        "priceChangePercent": {
+                          "description": "Percentage price change in the last 24 hours",
+                          "example": "-95.960",
+                          "type": "string"
+                        },
+                        "quoteVolume": {
+                          "description": "Total trading volume in quote asset",
+                          "example": "15.30000000",
+                          "type": "string"
+                        },
+                        "symbol": {
+                          "description": "Trading pair symbol",
+                          "example": "BTCUSDT",
+                          "type": "string"
+                        },
+                        "volume": {
+                          "description": "Total trading volume in base asset",
+                          "example": "8913.30000000",
+                          "type": "string"
+                        },
+                        "weightedAvgPrice": {
+                          "description": "Weighted average price over the last 24 hours",
+                          "example": "0.29628482",
+                          "type": "string"
+                        }
+                      },
+                      "type": "object"
+                    }
+                  ]
+                }
+              }
+            },
+            "description": "Successful response with 24-hour ticker statistics"
+          },
+          "400": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Error response object",
+                  "properties": {
+                    "code": {
+                      "description": "Error code",
+                      "example": -1100,
+                      "type": "integer"
+                    },
+                    "msg": {
+                      "description": "Error message",
+                      "example": "Invalid parameter",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Bad request - Invalid parameters"
+          },
+          "429": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Error response object",
+                  "properties": {
+                    "code": {
+                      "description": "Error code",
+                      "example": -1100,
+                      "type": "integer"
+                    },
+                    "msg": {
+                      "description": "Error message",
+                      "example": "Invalid parameter",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Rate limit exceeded"
+          },
+          "500": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "description": "Error response object",
+                  "properties": {
+                    "code": {
+                      "description": "Error code",
+                      "example": -1100,
+                      "type": "integer"
+                    },
+                    "msg": {
+                      "description": "Error message",
+                      "example": "Invalid parameter",
+                      "type": "string"
+                    }
+                  },
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Internal server error"
+          }
+        },
+        "securitySource": "unspecified"
       }
     }
   }
