@@ -105,12 +105,12 @@ local result, err = client:MarketData():load()
 
 | Language | Package | Install |
 | --- | --- | --- |
-| TypeScript | `@voxgig-sdk/market-data-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/market-data-sdk/releases) |
-| Python | `voxgig-sdk-market-data` | publish pending — [install from git tag](https://github.com/voxgig-sdk/market-data-sdk/releases) |
-| PHP | `voxgig-sdk/market-data` | publish pending — [install from git tag](https://github.com/voxgig-sdk/market-data-sdk/releases) |
+| TypeScript | `@voxgig-sdk/market-data-sdk` | publish pending — [install from git tag](https://github.com/voxgig-sdk/market-data-sdk/tags) |
+| Python | `voxgig-sdk-market-data` | publish pending — [install from git tag](https://github.com/voxgig-sdk/market-data-sdk/tags) |
+| PHP | `voxgig-sdk/market-data` | publish pending — [install from git tag](https://github.com/voxgig-sdk/market-data-sdk/tags) |
 | Golang | `github.com/voxgig-sdk/market-data-sdk/go` | `go get github.com/voxgig-sdk/market-data-sdk/go@latest` |
-| Ruby | `voxgig-sdk-market-data` | publish pending — [install from git tag](https://github.com/voxgig-sdk/market-data-sdk/releases) |
-| Lua | `voxgig-sdk-market-data` | publish pending — [install from git tag](https://github.com/voxgig-sdk/market-data-sdk/releases) |
+| Ruby | `voxgig-sdk-market-data` | publish pending — [install from git tag](https://github.com/voxgig-sdk/market-data-sdk/tags) |
+| Lua | `voxgig-sdk-market-data` | publish pending — [install from git tag](https://github.com/voxgig-sdk/market-data-sdk/tags) |
 | Go CLI | `github.com/voxgig-sdk/market-data-sdk/go-cli` | `go install github.com/voxgig-sdk/market-data-sdk/go-cli/cmd/market-data@latest` |
 | Go MCP server | `github.com/voxgig-sdk/market-data-sdk/go-mcp` | `go get github.com/voxgig-sdk/market-data-sdk/go-mcp@latest` |
 

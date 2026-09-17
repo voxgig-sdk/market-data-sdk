@@ -127,9 +127,9 @@ class Config {
 
     entity: {
       
-      market_data: {
-      },
-
+        market_data: {
+        },
+  
     }
   }
 
